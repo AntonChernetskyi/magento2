@@ -40,7 +40,7 @@ class AddRow extends \Magento\Backend\App\Action
     public function execute()
     {
         $handle = $this->_request->getFullActionName();
-//        var_dump($handle);
+//      var_dump($handle);
         $rowId = (int) $this->getRequest()->getParam('id');
         $rowData = $this->gridFactory->create();
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
@@ -53,11 +53,11 @@ class AddRow extends \Magento\Backend\App\Action
                 return;
             }
         }
-
         $this->coreRegistry->register('row_data', $rowData);
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
         $title = $rowId ? __('Edit Row Data ').$rowTitle : __('Add Row Data');
         $resultPage->getConfig()->getTitle()->prepend($title);
+
         return $resultPage;
     }
 

@@ -73,12 +73,16 @@ class InstallSchema implements InstallSchemaInterface
                 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT,
             ],
             'Creation Time'
-        )->addColumn(
-            'logo',
-            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-            255,
-            ['nullable' => true],
-            'Logo'
+
+//
+
+//
+//        )->addColumn(
+//            'logo',
+//            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+//            255,
+//            ['nullable' => true],
+//            'Logo'
         )->addColumn(
             'update_time',
             \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
@@ -94,7 +98,6 @@ class InstallSchema implements InstallSchemaInterface
         )->setComment(
             'Row Data Table'
         );
-
         $installer->getConnection()->createTable($table);
         $installer->endSetup();
     }

@@ -126,15 +126,6 @@
                 </item>
             </argument>
         </column>
-        <!--  Add icon      -->
-        <column name="icon" component="Magento_Ui/js/grid/columns/thumbnail" class="First\Vendor\Ui\Component\Listing\Column\Image">
-            <settings>
-                <label translate="true">Icon</label>
-                <hasPreview>1</hasPreview>
-                <sortable>false</sortable>
-            </settings>
-        </column>
-        <!--        -->
         <column name="content">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -184,7 +175,6 @@
                 </item>
             </argument>
         </column>
-
         <!--  Add Action with each row of grid and for this we will create a class Action  -->
         <actionsColumn name="actions" class="First\Vendor\Ui\Component\Listing\Grid\Column\Action">
             <argument name="data" xsi:type="array">
